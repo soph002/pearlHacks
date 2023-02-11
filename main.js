@@ -34,8 +34,9 @@ calculate.onclick = function calculateOriginalSpend() {
 		document.getElemenetById("answer").innerHTML=answer
 
 	}
+}
 
-     function myCreateFunction() {
+	function myCreateFunction() {
                     var table = document.getElementById("Subscriptions");
                     var row = table.insertRow(0);
                     var name = row.insertCell(0);
