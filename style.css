@@ -17,4 +17,14 @@ font-size: 18px;
 table, th, td {
   border: 1px solid black;
   width: 50%;
+  border-collapse: collapse;
+  color: #20aaa0;
+}
+th {
+	height: 70px;
+	text-align: left;
+}
+th, td {
+	padding: 15px;
+	text-align: left;
 }
