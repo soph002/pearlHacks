@@ -19,6 +19,7 @@ table, th, td {
   width: 50%;
   border-collapse: collapse;
   color: #20aaa0;
+  background-color: #ffffff;
 }
 th {
 	height: 70px;
