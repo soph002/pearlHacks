@@ -38,12 +38,14 @@ calculate.onclick = function calculateOriginalSpend() {
 
 //add name method
 function clickName() {
-	let promptForName = prompt("Please enter the name of subscription:");
-                    if (promptForName == null || promptForName == "") {
-                        name.innerHTML = "invalid";
-                    } else {
-                        name.innerHTML = promptForName;
-                    }
+    let text;
+	let promptForName = prompt("Please enter your name");
+    if (promptForName == null || promptForName == "") {
+        text = "invalid";
+    } else {
+        text = "Welcome Back "+promptForName+"!";
+    }
+    document.getElemenetById("nameOfPerson").innerHTML=text;
 
 }
 
