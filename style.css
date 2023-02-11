@@ -10,3 +10,7 @@ button {
 	font-size: 15px;
 	margin: 15px;
 }
+
+table, td {
+  border: 1px solid black;
+}
