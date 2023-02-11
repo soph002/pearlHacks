@@ -34,7 +34,36 @@ calculate.onclick = function calculateOriginalSpend() {
 		document.getElemenetById("answer").innerHTML=answer
 
 	}
-}
 
+     function myCreateFunction() {
+                    var table = document.getElementById("Subscriptions");
+                    var row = table.insertRow(0);
+                    var name = row.insertCell(0);
+                    var cost = row.insertCell(1);
+                    var date = row.insertCell(2);
+
+                    // could be cleaner with for loop. 
+                    let promptForName = prompt("Please enter the name of subscription:");
+                    if (promptForName == null || promptForName == "") {
+                        name.innerHTML = "invalid";
+                    } else {
+                        name.innerHTML = promptForName;
+                    }
+
+                    let promptForCost = prompt("Please enter the name of subscription:");
+                    if (promptForCost == null || promptForCost == "") {
+                        cost.innerHTML = "invalid";
+                    } else {
+                        cost.innerHTML = promptForCost;
+                    }
+                    
+                    let promptForDate = prompt("Please enter the name of subscription:");
+                    if (promptForDate == null || promptForDate == "") {
+                        date.innerHTML = "invalid";
+                    } else {
+                        date.innerHTML = promptForDate;
+                    }
+                }
+			}
 
 
