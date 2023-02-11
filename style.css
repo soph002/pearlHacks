@@ -1,12 +1,15 @@
 body {
-	background-color: #97eaae;
-	color: #c34e4c;
-	text-align: center;
+	background-color: #20aaa0;
+	color: #ffffff;
+	text-align: bottom left;
 	margin-top: 80px;
 }
 button {
-	background-color: #2b5a6d;
-	color: #a6e8e2;
-	font-size: 15px;
-	margin: 15px;
+background-color: #ffffff;
+border: none;
+color: #20aaa0;
+padding: 15px 32px;
+margin-left: auto;
+display: inline-block;
+font-size: 18px;
 }
