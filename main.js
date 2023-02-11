@@ -36,6 +36,18 @@ calculate.onclick = function calculateOriginalSpend() {
 	}
 }
 
+//updates the amount left to spend when a purchase is added in any category
+var amount = document.getElemenetById("amt").innerHTML
+var updateAmount = document.getElementById("Update")
+
+updateAmount.onclick =
+
+function updateAmountLeft() {
+	let currentTotal= document.getElemenetById("amtLeftToSpend").textContent
+	let answer1 = Integer.parseInt(currentTotal)-amount
+	document.getElementById("answer1").innerHTML=answer1
+}
+
 	function myCreateFunction() {
                     var table = document.getElementById("Subscriptions");
                     var row = table.insertRow(0);
