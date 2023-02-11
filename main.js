@@ -64,7 +64,7 @@ calculate.onclick = function calculateOriginalSpend() {
                     } else {
                         date.innerHTML = promptForDate;
                     }
-                }
-			}
+    }
+
 
 
