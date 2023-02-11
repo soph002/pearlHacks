@@ -36,11 +36,25 @@ calculate.onclick = function calculateOriginalSpend() {
 	}
 }
 
+//add name method
+function clickName() {
+	let promptForName = prompt("Please enter the name of subscription:");
+                    if (promptForName == null || promptForName == "") {
+                        name.innerHTML = "invalid";
+                    } else {
+                        name.innerHTML = promptForName;
+                    }
+
+}
+
+
+
+
 //updates the amount left to spend when a purchase is added in any category
 var amount = document.getElemenetById("amt").innerHTML
 var updateAmount = document.getElementById("Update")
 
-updateAmount.onclick =
+//updateAmount.onclick =
 
 function updateAmountLeft() {
 	let currentTotal= document.getElemenetById("amtLeftToSpend").textContent
