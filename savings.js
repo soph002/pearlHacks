@@ -1,3 +1,4 @@
+//one of the options for users, wonder if this could be put into hierarchies with more time
 // adding rows into savings tables
 function addNewRowSavings() {
     var table = document.getElementById("savingsTable");

@@ -1,4 +1,4 @@
-//could be in a food js    
+//one of the options for users, wonder if this could be put into hierarchies with more time
 // adding rows into food tables
 function addNewRowFood() {
     var table = document.getElementById("FoodTable");

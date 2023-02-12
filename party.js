@@ -1,3 +1,4 @@
+//one of the options for users, wonder if this could be put into hierarchies with more time
 // adding rows into party tables
 function addNewRow() {
     var table = document.getElementById("partyTable");
