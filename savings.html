@@ -2,15 +2,20 @@
 <html lang="en">
     <head>
         <link rel="stylesheet" href="style.css">
-        <script src="tableUpdater.js" defer></script>
+        <script src="savings.js" defer></script>
 
     </head>
     <h1>SAVINGS:</h1>
     <body>
+       <body onload = "infoComeBack()" ></body>
         <table id="InternalTable">
             <tr>
               <td>Desc</td>
               <td>Cost</td>
+            </tr>
+            <tr>
+              <td id=savDesc></td>
+              <td id=savCost></td>
             </tr>
           </table>
         
