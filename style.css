@@ -16,15 +16,11 @@ text-align: center;
 }
 
 table, th, td {
-  border: 1px solid black;
+  border: 3px solid rgb(255, 255, 255);
   width: 15%;
   border-collapse: collapse;
   color: #ffffff;
-  
-  
-  
-  
-
+  margin-inline: auto;
 }
 th {
 	height: 70px;
@@ -37,4 +33,10 @@ th, td {
 h2.pos_left {
 	position: relative;
 	left: -20px;
+}
+h1 {
+	font-size: 40;
+}
+h3{
+	position: sticky;
 }

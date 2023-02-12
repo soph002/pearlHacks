@@ -1,18 +1,25 @@
+<!-- One of the website fronts, wonder if hierarchies could be implemented-->
 <!DOCTYPE HTML>
 <html lang="en">
     <head>
         <link rel="stylesheet" href="style.css">
-        <script src="main.js" defer></script>
+        <script src="party.js" defer></script>
 
     </head>
     <h1>PARTY:</h1>
     <body>
-        <table id="InternalTable">
+      <body onload = "infoComeBackParty()" ></body>
+        <table id="partyTable">
             <tr>
               <td>Desc</td>
-              <td>Cost</td>
+              <td>Cost ($)</td>
+            </tr>
+            <tr>
+              <td id=partyDesc></td>
+              <td id=partyCost></td>
             </tr>
           </table>
+          <br>
         
           <button onclick="addNewRow()">AddNewRow</button>
           <button onclick = "window.location.href='index.html';" >HOME</button> 

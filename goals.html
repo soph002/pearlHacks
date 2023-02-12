@@ -1,13 +1,27 @@
+<!-- One of the website fronts, wonder if hierarchies could be implemented-->
 <!DOCTYPE HTML>
 <html lang="en">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script src="goals.js" defer></script>
+
+    </head>
+    <h1>Goals:</h1>
     <body>
-        background-color: #20aaa0
-        <p>These are the things I want so much!</p>
-        <ul>
-            <li>Car</li>
-                <img src = "https://upload.wikimedia.org/wikipedia/commons/3/36/Pagani%2C_GIMS_2019%2C_Le_Grand-Saconnex_%28GIMS0023%29.jpg" alt = car image width = "300" height = "300" >
-            <li>New Phone</li>
-                <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCuvvSTQSmJO7tru52li1rVHj3loVxanXpIbYOFdzqbGTbWblOEFcysyG72LHkxNFNrz0&usqp=CAU" alt = iphone width = "300" height = "300" >
-        </ul>
+        <body onload = "infoComeBackGoalPage()" ></body>
+        <table id="goalTable">
+          <tr>
+            <th>Goal Desc</th>
+            <th>Cost ($)</th>
+          </tr>
+            <tr>
+              <td id=goalDescID></td>
+              <td id=goalCostID></td>
+            </tr>
+          </table>
+        
+          <button onclick="addNewRowGoal()">AddNewGoal</button>
+          <button onclick = "window.location.href='index.html';" >HOME</button> 
+
         </body>
 </html>

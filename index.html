@@ -1,44 +1,46 @@
+<!-- One of the website fronts, wonder if hierarchies could be implemented-->
 <!DOCTYPE HTML>
 <html lang="en">
     <head>
+        <title>Weekly Budget Bunny</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
-        <title> Financial Advisor </title>
         <link rel="stylesheet" href="style.css">
         <script src="main.js" defer></script>
+      
     </head>
     <body>
-        <button onclick="clickName()">name</button>
-        <button onclick="myFunction()">animal</button>
-        <button onclick="myFunction()">PS</button>
-        <button onclick="inputSalary()">AS</button>
+      <body onload = "infoComeBack()" ></body>
+        <h1>Weekly Budget Bunny</h1>
+        <button onclick="clickName()">Name</button>
+        <button onclick="animalName()">Animal</button>
+        <button onclick="inputSalary()">AvgSal</button>
 
       
        <h2 id="nameOfPerson"></h2>
-       <img src = "https://upload.wikimedia.org/wikipedia/commons/5/57/Sheldon_With_Carrot.gif" alt = "bunny:) " width = "500" height = "500" >
-        
+       <img src = "https://upload.wikimedia.org/wikipedia/commons/5/57/Sheldon_With_Carrot.gif" alt =" bunny:)" width = "500" height = "500" >
+       <h3 id="nameOfBunny"></h3>
+       <div id="carrot"></div> 
+       <h3>Total ($):</h3>
+       <h3 id="total"></h3>
+
 
         <table id="Subscriptions">
             <tr>
               <th>Subscription</th>
-              <th>Cost</th>
+              <th>Cost ($)</th>
               <th>Date Due</th>
             </tr>
-          </table>
-          <br>
-          <table id="party">
-            <tr>
-                <th>party</th>
-                <th>income</th>
-                <th>food</th>
-                <th>savings</th>
-                <th>goals</th>
-                <th>nec</th>
 
+            <!-- Possibly attempt a loop to make sure everything stays saved, not sure-->
+            <tr>
+              <td id=subName></td>
+              <td id=subCost></td>
+              <td id=subDate></td>
             </tr>
           </table>
           <br>
-
+         
           <button onclick="myCreateFunction()">Add A New Subscription</button>
           
           <br>
@@ -49,8 +51,5 @@
           <button onclick = "window.location.href='party.html';" >PARTY</button>     
           <button onclick = "window.location.href='savings.html';" >SAVINGS</button>  
           <button onclick = "window.location.href='goals.html';" >GOALS</button> 
-          <br>
-          <p>Total is</p>
-          <p id="total"></p>
     </body>
             </html>
