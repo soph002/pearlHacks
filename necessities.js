@@ -1,3 +1,4 @@
+
 // adding rows into food tables
 function addNewRowNecs() {
     var table = document.getElementById("NecsTable");
@@ -23,7 +24,7 @@ function addNewRowNecs() {
     }
 
     
-    var temp = parseInt(document.getElementById("total").innerHTML)-parseInt(cost.innerHTML);
+    var temp = parseInt(localStorage.getItem("salary"))-parseInt(cost.innerHTML);
     localStorage.setItem("salary",temp)
 
 }
