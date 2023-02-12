@@ -76,8 +76,12 @@ function myCreateFunction() {
                         cost.innerHTML = "invalid";
                     } else {
                         cost.innerHTML = promptForCost;
-                        localStorage.setItem("salary",JSON.stringify(String.valueOf(localStorage.getItem("salary"))-String.valueOf(cost)))
-                        document.getElementById("total").innerHTML=localStorage.getItem("salary");            
+                        if(localStorage.getItem("salary") !=null)
+                        {
+                            var newcost=Integer.parseInt(localStorage.getItem("salary"))-Integer.parseInt(cost.innerHTML);
+                            localStorage.setItem("salary",newcost.toString);
+                            document.getElementById("total").innerHTML=localStorage.getItem("salary");
+                        }        
                     }
                     
                     let promptForDate = prompt("Please enter the date of subscription:");
@@ -107,18 +111,18 @@ function myCreateFunction() {
             cost.innerHTML = "invalid";
         } else {
             cost.innerHTML = promptForCost;
-            var newcost=Number(localStorage.getItem("salary"))-Number(cost);
+            
         }
     
     }
 
 function inputSalary(){
-    let promptForDesc = prompt("Enter average salary for month");
-    if (promptForDesc == null || promptForDesc == "") {
+    let promptForAvgSal = prompt("Enter average salary for month");
+    if (promptForAvgSal == null || promptForAvgSal == "") {
         localStorage.setItem("salary",0);
         // in the future would clean this up so it would function with this error
     } else {
-        localStorage.setItem("salary",promptForDesc);
+        localStorage.setItem("salary",promptForAvgSal);
     }
     document.getElementById("total").innerHTML=localStorage.getItem("salary");
 }
