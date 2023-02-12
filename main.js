@@ -1,31 +1,4 @@
 
-//collecting the user information for calculate, dont know if we are using this
-//this can stay in the main paige
-var percentageToSave = document.getElementById("PS").innerHTML
-var avgSalary = document.getElementById("AS").innerHTML
-var calculate = document.getElemenetById("calculate")
-
-//handles the original calculation of PS and AS
-calculate.onclick = function calculateOriginalSpend() {
-	//find a way to double check we are only given numbers
-	if (percentageToSave==null || percentageToSave=="" || avgSalary==null || avgSalary=="" ) {
-		//error message at the top?
-	}
-	else {
-		//double checking I have numbers
-		try {
-			Integer.parseInt(percentageToSave)
-			Integer.parseInt(avgSalary)
-		}
-		catch (NumberFormatException) {
-			return null
-		}
-		//return what the original spend is
-		let answer= (percentageToSave/100) * avgSalary
-		document.getElemenetById("answer").innerHTML=answer
-
-	}
-}
 
 //can stay in main
 //add name method
@@ -38,6 +11,7 @@ function clickName() {
             text = "Welcome Back "+nameInput+"!";
         }
         document.getElementById("nameOfPerson").innerHTML=text;
+        localStorage.setItem("personName",text)
 
 }
 
@@ -85,7 +59,17 @@ function myCreateFunction() {
     }
 
 
-
+function animalName() {
+    let text;
+	    let nameInput = prompt("Please enter the name for your bunny");
+        if (nameInput == null || nameInput == "") {
+            text = "invalid";
+        } else {
+            text = "Hi! I'm "+nameInput;
+        }
+        document.getElementById("nameOfBunny").innerHTML=text;
+        localStorage.setItem("animalName",text)
+}
     
 
 function inputSalary(){
@@ -108,6 +92,8 @@ function infoComeBack() {
     document.getElementById("subCost").innerHTML=lastCostSubscription;
     let lastDateSubscription = localStorage.getItem("subscriptionDate");
     document.getElementById("subDate").innerHTML=lastDateSubscription;
+    document.getElementById("nameOfPerson").innerHTML=localStorage.getItem("personName");
+    document.getElementById("nameOfBunny").innerHTML=localStorage.getItem("animalName");
     if(localStorage.getItem("achievement")!=null){
         var img = document.createElement("img");
         img.src = "https://cdn.iconscout.com/icon/free/png-256/carrot-6932694-5659217.png";
