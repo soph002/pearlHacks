@@ -34,7 +34,7 @@ function clickName() {
         if (nameInput == null || nameInput == "") {
             text = "invalid";
         } else {
-            text = nameInput;
+            text = "Welcome Back "+nameInput+"!";
         }
         document.getElementById("nameOfPerson").innerHTML=text;
 
