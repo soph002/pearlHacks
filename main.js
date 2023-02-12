@@ -130,7 +130,12 @@ function infoComeBackHomePage() {
     document.getElementById("subCost").innerHTML=lastCostSubscription;
     let lastDateSubscription = localStorage.getItem("subscriptionDate");
     document.getElementById("subDate").innerHTML=lastDateSubscription;
-
+    if(localStorage.getItem("achievement")!=null){
+        var img = document.createElement("img");
+        img.src = "https://cdn.iconscout.com/icon/free/png-256/carrot-6932694-5659217.png";
+        var src = document.getElementById("carrot");
+        src.appendChild(img);
+    }
 }
 
 function infoComeBackFoodPage(){
