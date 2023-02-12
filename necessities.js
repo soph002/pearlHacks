@@ -30,10 +30,10 @@ function addNewRowNecs() {
 }
 
 //reset for this page
-function infoComeBackFoodPage(){
+function infoComeBackNec(){
     let lastNecDesc = localStorage.getItem("necsDesc");
-    document.getElementById("necDesc").innerHTML=lastFoodDesc;
-    let lastFoodCost = localStorage.getItem("necsCost");
-    document.getElementById("necCosD").innerHTML=lastFoodCost;
+    document.getElementById("necsDesc").innerHTML=lastNecDesc;
+    let lastNecCost = localStorage.getItem("necsCost");
+    document.getElementById("necsCost").innerHTML=lastNecCost;
 
 }
