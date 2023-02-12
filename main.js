@@ -26,16 +26,17 @@ calculate.onclick = function calculateOriginalSpend() {
 	}
 }
 
+
 //add name method
 function clickName() {
-    let text;
-	let promptForName = prompt("Please enter your name");
-    if (promptForName == null || promptForName == "") {
-        text = "invalid";
-    } else {
-        text = "Welcome Back "+promptForName+"!";
-    }
-    document.getElemenetById("nameOfPerson").innerHTML=text;
+        let text;
+	    let nameInput = prompt("Please enter your name");
+        if (nameInput == null || nameInput == "") {
+            text = "invalid";
+        } else {
+            text = nameInput;
+        }
+        document.getElemenetById("nameOfPerson").innerHTML=text;
 
 }
 
