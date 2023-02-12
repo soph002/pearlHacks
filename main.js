@@ -69,14 +69,14 @@ function updateAmountLeft() {
                         name.innerHTML = promptForName;
                     }
 
-                    let promptForCost = prompt("Please enter the name of subscription:");
+                    let promptForCost = prompt("Please enter the cost of subscription:");
                     if (promptForCost == null || promptForCost == "") {
                         cost.innerHTML = "invalid";
                     } else {
                         cost.innerHTML = promptForCost;
                     }
                     
-                    let promptForDate = prompt("Please enter the name of subscription:");
+                    let promptForDate = prompt("Please enter the date of subscription:");
                     if (promptForDate == null || promptForDate == "") {
                         date.innerHTML = "invalid";
                     } else {
