@@ -7,7 +7,7 @@ function addNewRowFood() {
     var cost = row.insertCell(1);
 
     // could be cleaner with for loop. 
-    let promptForDesc = prompt("Please enter the name of subscription:");
+    let promptForDesc = prompt("Please enter the description of the food:");
     if (promptForDesc == null || promptForDesc == "") {
         desc.innerHTML = "invalid";
     } else {
@@ -15,7 +15,7 @@ function addNewRowFood() {
         localStorage.setItem("foodDesc",promptForDesc);
     }
 
-    let promptForCost = prompt("Please enter the name of subscription:");
+    let promptForCost = prompt("Please enter the cost of the food:");
     if (promptForCost == null || promptForCost == "") {
         cost.innerHTML = "invalid";
     } else {
