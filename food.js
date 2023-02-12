@@ -31,5 +31,7 @@ function infoComeBackFoodPage(){
     document.getElementById("foodDescID").innerHTML=lastFoodDesc;
     let lastFoodCost = localStorage.getItem("foodCost");
     document.getElementById("foodCostID").innerHTML=lastFoodCost;
+    let lastTotalAmt = localStorage.getItem("salary");
+    document.getElementById("total").innerHTML=lastTotalAmt;
 
 }

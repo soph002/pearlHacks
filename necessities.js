@@ -35,5 +35,7 @@ function infoComeBackNec(){
     document.getElementById("necsDesc").innerHTML=lastNecDesc;
     let lastNecCost = localStorage.getItem("necsCost");
     document.getElementById("necsCost").innerHTML=lastNecCost;
+    let lastTotalAmt = localStorage.getItem("salary");
+    document.getElementById("total").innerHTML=lastTotalAmt;
 
 }

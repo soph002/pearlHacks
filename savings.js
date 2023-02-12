@@ -1,6 +1,6 @@
 // adding rows into savings tables
 function addNewRowSavings() {
-    var table = document.getElementById("Table");
+    var table = document.getElementById("savingsTable");
     var row = table.insertRow(0);
     var desc = row.insertCell(0);
     var cost = row.insertCell(1);
@@ -34,5 +34,7 @@ function infoComeBackSavings(){
     document.getElementById("savDesc").innerHTML=lastSavDesc;
     let lastSavCost = localStorage.getItem("savCost");
     document.getElementById("savCost").innerHTML=lastSavCost;
+    let lastTotalAmt = localStorage.getItem("salary");
+    document.getElementById("total").innerHTML=lastTotalAmt;
 
 }

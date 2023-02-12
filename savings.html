@@ -8,7 +8,7 @@
     <h1>SAVINGS:</h1>
     <body>
        <body onload = "infoComeBackSavings()" ></body>
-        <table id="InternalTable">
+        <table id="savingsTable">
             <tr>
               <th>Desc</th>
               <th>Cost</th>
@@ -18,6 +18,9 @@
               <td id=savCost></td>
             </tr>
           </table>
+          
+          <h3>Total:</h3>
+          <h3 id="total"></h3>
         
           <button onclick="addNewRowSavings()">AddNewRow</button>
           <button onclick = "window.location.href='index.html';" >HOME</button> 

@@ -1,6 +1,6 @@
 // adding rows into party tables
 function addNewRow() {
-    var table = document.getElementById("Table");
+    var table = document.getElementById("partyTable");
     var row = table.insertRow(0);
     var desc = row.insertCell(0);
     var cost = row.insertCell(1);
@@ -29,10 +29,12 @@ function addNewRow() {
 }
 
 //reset for this page
-function infoComeBackNec(){
+function infoComeBackParty(){
     let lastPartyDesc = localStorage.getItem("partyDesc");
     document.getElementById("partyDesc").innerHTML=lastPartyDesc;
     let lastPartyCost = localStorage.getItem("partyCost");
     document.getElementById("partyCost").innerHTML=lastPartyCost;
+    let lastTotalAmt = localStorage.getItem("salary");
+    document.getElementById("total").innerHTML=lastTotalAmt;
 
 }
