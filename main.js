@@ -56,7 +56,7 @@ function updateAmountLeft() {
 
 	function myCreateFunction() {
                     var table = document.getElementById("Subscriptions");
-                    var row = table.insertRow(0);
+                    var row = table.insertRow(1);
                     var name = row.insertCell(0);
                     var cost = row.insertCell(1);
                     var date = row.insertCell(2);
