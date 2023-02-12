@@ -7,7 +7,7 @@ function addNewRowFood() {
     var cost = row.insertCell(1);
 
     // could be cleaner with for loop. 
-    let promptForDesc = prompt("Please enter the description of the food:");
+    let promptForDesc = prompt("Please enter the description");
     if (promptForDesc == null || promptForDesc == "") {
         desc.innerHTML = "invalid";
     } else {
@@ -15,12 +15,21 @@ function addNewRowFood() {
         localStorage.setItem("foodDesc",promptForDesc);
     }
 
-    let promptForCost = prompt("Please enter the cost of the food:");
+    let promptForCost = prompt("Please enter the cost");
     if (promptForCost == null || promptForCost == "") {
         cost.innerHTML = "invalid";
     } else {
         cost.innerHTML = promptForCost;
         localStorage.setItem("foodCost",promptForCost);
     }
+
+}
+
+//reset for this page
+function infoComeBackFoodPage(){
+    let lastFoodDesc = localStorage.getItem("foodDesc");
+    document.getElementById("foodDescID").innerHTML=lastFoodDesc;
+    let lastFoodCost = localStorage.getItem("foodCost");
+    document.getElementById("foodCostID").innerHTML=lastFoodCost;
 
 }

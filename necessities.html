@@ -2,21 +2,25 @@
 <html lang="en">
     <head>
         <link rel="stylesheet" href="style.css">
-        <script src="main.js" defer></script>
+        <script src="necessities.js" defer></script>
 
     </head>
     <h1>NECESSITIES:</h1>
     <body>
         <table id="NecsTable">
+          <tr>
+            <th>Desc</th>
+            <th>Cost</th>
+          </tr>
             <tr>
-              <td id=Desc></td>
-              <td id=Cost></td>
+              <td id=necsDesc></td>
+              <td id=necsCost></td>
             </tr>
           </table>
         
-          <button onclick="addNewRow()">AddNewRow</button>
+          <button onclick="addNewRowNecs()">AddNewRow</button>
           <button onclick = "window.location.href='index.html';" >HOME</button> 
 
-          <p id="total"></p>
+          
         </body>
 </html>
