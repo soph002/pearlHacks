@@ -50,7 +50,6 @@ var updateAmount = document.getElementById("Update")
 //updateAmount.onclick =
 
 function updateAmountLeft() {
-
 	let currentTotal= document.getElemenetById("amtLeftToSpend").textContent
 	let answer1 = Integer.parseInt(currentTotal)-amount
 	document.getElementById("answer1").innerHTML=answer1
@@ -89,7 +88,6 @@ function myCreateFunction() {
                     {
                         var temp = parseInt(document.getElementById("total").innerHTML)-parseInt(cost.innerHTML);
                         document.getElementById("total").innerHTML=temp;
-                        localStorage.setItem("salary",temp);
                     }
     }
 // adding rows into internal tables
