@@ -111,6 +111,9 @@ function infoComeBack() {
     if(localStorage.getItem("achievement")!=null){
         var img = document.createElement("img");
         img.src = "https://cdn.iconscout.com/icon/free/png-256/carrot-6932694-5659217.png";
+        img.alt ="carrot!"
+        img.height="50"
+        img.width="50"
         var src = document.getElementById("carrot");
         src.appendChild(img);
     }
