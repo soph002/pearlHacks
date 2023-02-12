@@ -22,11 +22,9 @@ function addNewRowNecs() {
         localStorage.setItem("necsCost",promptForCost);
     }
 
-    if(localStorage.getItem("salary") !=null)
-                    {
-                        var temp = parseInt(document.getElementById("total").innerHTML)-parseInt(cost.innerHTML);
-                        document.getElementById("total").innerHTML=temp;
-                    }
+    
+    var temp = parseInt(document.getElementById("total").innerHTML)-parseInt(cost.innerHTML);
+    localStorage.setItem("salary",temp)
 
 }
 
