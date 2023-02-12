@@ -75,13 +75,7 @@ function myCreateFunction() {
                     if (promptForCost == null || promptForCost == "") {
                         cost.innerHTML = "invalid";
                     } else {
-                        cost.innerHTML = promptForCost;
-                        if(localStorage.getItem("salary") !=null)
-                        {
-                            var newcost=Integer.parseInt(localStorage.getItem("salary"))-Integer.parseInt(cost.innerHTML);
-                            localStorage.setItem("salary",newcost.toString);
-                            document.getElementById("total").innerHTML=localStorage.getItem("salary");
-                        }        
+                        cost.innerHTML = promptForCost;        
                     }
                     
                     let promptForDate = prompt("Please enter the date of subscription:");
@@ -89,6 +83,11 @@ function myCreateFunction() {
                         date.innerHTML = "invalid";
                     } else {
                         date.innerHTML = promptForDate;
+                    }
+                    if(localStorage.getItem("salary") !=null)
+                    {
+                        var temp = parseInt(document.getElementById("total").innerHTML)+parseInt(cost);
+                        document.getElementById("total").innerHTML=temp;
                     }
     }
 // adding rows into internal tables
