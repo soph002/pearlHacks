@@ -123,7 +123,7 @@ function inputSalary(){
     } else {
         localStorage.setItem("salary",promptForAvgSal);
     }
-    document.getElementById("total").innerHTML=localStorage.getItem("salary");
+   document.getElementById("total").innerHTML=localStorage.getItem("salary");
 }
 
 
