@@ -1,5 +1,6 @@
 
-//collecting the user information
+//collecting the user information for calculate, dont know if we are using this
+//this can stay in the main paige
 var percentageToSave = document.getElementById("PS").innerHTML
 var avgSalary = document.getElementById("AS").innerHTML
 var calculate = document.getElemenetById("calculate")
@@ -26,7 +27,7 @@ calculate.onclick = function calculateOriginalSpend() {
 	}
 }
 
-
+//can stay in main
 //add name method
 function clickName() {
         let text;
@@ -41,20 +42,7 @@ function clickName() {
 }
 
 
-
-
-//updates the amount left to spend when a purchase is added in any category
-var amount = document.getElemenetById("amt").innerHTML
-var updateAmount = document.getElementById("Update")
-
-//updateAmount.onclick =
-
-function updateAmountLeft() {
-	let currentTotal= document.getElemenetById("amtLeftToSpend").textContent
-	let answer1 = Integer.parseInt(currentTotal)-amount
-	document.getElementById("answer1").innerHTML=answer1
-}
-
+//can stay on main
 //adding subscriptions to table on homepage
 function myCreateFunction() {
     var table = document.getElementById("Subscriptions");
@@ -93,31 +81,8 @@ function myCreateFunction() {
                         document.getElementById("total").innerHTML=temp;
                     }
     }
-// adding rows into food tables
-    function addNewRowFood() {
-        var table = document.getElementById("FoodTable");
-        var row = table.insertRow(0);
-        var desc = row.insertCell(0);
-        var cost = row.insertCell(1);
-    
-        // could be cleaner with for loop. 
-        let promptForDesc = prompt("Please enter the name of subscription:");
-        if (promptForDesc == null || promptForDesc == "") {
-            desc.innerHTML = "invalid";
-        } else {
-            desc.innerHTML = promptForDesc;
-            localStorage.setItem("foodDesc",promptForDesc);
-        }
-    
-        let promptForCost = prompt("Please enter the name of subscription:");
-        if (promptForCost == null || promptForCost == "") {
-            cost.innerHTML = "invalid";
-        } else {
-            cost.innerHTML = promptForCost;
-            localStorage.setItem("foodCost",promptForCost);
-        }
-    
-    }
+
+
 
     // adding rows into food tables
     function addNewRowNecs() {
