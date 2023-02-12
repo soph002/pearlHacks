@@ -2,14 +2,27 @@
 <html lang="en">
     <head>
         <link rel="stylesheet" href="style.css">
-        <script src="main.js" defer></script>
+        <script src="goals.js" defer></script>
 
     </head>
+    <h1>Goals:</h1>
     <body>
-        <p>These are the things I want so much!</p>
-        <ul>
-            <li>Car</li>
-            <li>New Phone</li>
-        </ul>
+        <body onload = "infoComeBackGoalPage()" ></body>
+        <table id="goalTable">
+          <tr>
+            <th>Desc</th>
+            <th>Cost</th>
+          </tr>
+            <tr>
+              <td id=goalDescID></td>
+              <td id=goalCostID></td>
+            </tr>
+          </table>
+
+          <p id=total></p>
+        
+          <button onclick="addNewRowGoal()">AddNewGoal</button>
+          <button onclick = "window.location.href='index.html';" >HOME</button> 
+
         </body>
 </html>
