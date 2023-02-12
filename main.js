@@ -69,13 +69,15 @@ function myCreateFunction() {
                         name.innerHTML = "invalid";
                     } else {
                         name.innerHTML = promptForName;
+                        localStorage.setItem("subscriptionName",promptForName);
                     }
 
                     let promptForCost = prompt("Please enter the cost of subscription:");
                     if (promptForCost == null || promptForCost == "") {
                         cost.innerHTML = "invalid";
                     } else {
-                        cost.innerHTML = promptForCost;        
+                        cost.innerHTML = promptForCost;  
+                        localStorage.setItem("subscriptionCost", promptForCost);      
                     }
                     
                     let promptForDate = prompt("Please enter the date of subscription:");
@@ -83,6 +85,7 @@ function myCreateFunction() {
                         date.innerHTML = "invalid";
                     } else {
                         date.innerHTML = promptForDate;
+                        localStorage.setItem("subscriptionDate",promptForDate);
                     }
                     if(localStorage.getItem("salary") !=null)
                     {
@@ -129,6 +132,13 @@ function inputSalary(){
 function infoComeBack() {
     let lastTotalAmt = localStorage.getItem("salary");
     document.getElementById("total").innerHTML=lastTotalAmt;
+    let lastNameSubscription = localStorage.getItem("subscriptionName");
+    document.getElementById("subName").innerHTML=lastNameSubscription;
+    let lastCostSubscription = localStorage.getItem("subscriptionCost");
+    document.getElementById("subCost").innerHTML=lastCostSubscription;
+    let lastDateSubscription = localStorage.getItem("subscriptionDate");
+    document.getElementById("subDate").innerHTML=lastDateSubscription;
+
 }
 
 
