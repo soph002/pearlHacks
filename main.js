@@ -75,40 +75,18 @@ function myCreateFunction() {
                         date.innerHTML = promptForDate;
                         localStorage.setItem("subscriptionDate",promptForDate);
                     }
+
                     if(localStorage.getItem("salary") !=null)
                     {
                         var temp = parseInt(document.getElementById("total").innerHTML)-parseInt(cost.innerHTML);
                         document.getElementById("total").innerHTML=temp;
+                        localStorage.setItem("salary",temp)
                     }
     }
 
 
 
-    // adding rows into food tables
-    function addNewRowNecs() {
-        var table = document.getElementById("NecsTable");
-        var row = table.insertRow(0);
-        var desc = row.insertCell(0);
-        var cost = row.insertCell(1);
     
-        // could be cleaner with for loop. 
-        let promptForDesc = prompt("Please enter the name of subscription:");
-        if (promptForDesc == null || promptForDesc == "") {
-            desc.innerHTML = "invalid";
-        } else {
-            desc.innerHTML = promptForDesc;
-            localStorage.setItem("necsDesc",promptForDesc);
-        }
-    
-        let promptForCost = prompt("Please enter the name of subscription:");
-        if (promptForCost == null || promptForCost == "") {
-            cost.innerHTML = "invalid";
-        } else {
-            cost.innerHTML = promptForCost;
-            localStorage.setItem("necsCost",promptForCost);
-        }
-    
-    }
 
 function inputSalary(){
     let promptForAvgSal = prompt("Enter average salary for month");
@@ -121,7 +99,7 @@ function inputSalary(){
    document.getElementById("total").innerHTML=localStorage.getItem("salary");
 }
 
-function infoComeBackHomePage() {
+function infoComeBack() {
     let lastTotalAmt = localStorage.getItem("salary");
     document.getElementById("total").innerHTML=lastTotalAmt;
     let lastNameSubscription = localStorage.getItem("subscriptionName");
@@ -138,13 +116,7 @@ function infoComeBackHomePage() {
     }
 }
 
-function infoComeBackFoodPage(){
-    let lastFoodDesc = localStorage.getItem("foodDesc");
-    document.getElementById("foodDescID").innerHTML=lastFoodDesc;
-    let lastFoodCost = localStorage.getItem("foodCost");
-    document.getElementById("foodCostID").innerHTML=lastFoodCost;
 
-}
 
 
 
