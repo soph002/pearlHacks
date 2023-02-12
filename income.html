@@ -2,19 +2,27 @@
 <html lang="en">
     <head>
         <link rel="stylesheet" href="style.css">
-        <script src="main.js" defer></script>
+        <script src="income.js" defer></script>
 
     </head>
     <h1>INCOME:</h1>
     <body>
-        <table id="InternalTable">
+        <body onload = "infoComeBackIncomePage()" ></body>
+          <table id="incomeTable">
             <tr>
-              <td>Desc</td>
-              <td>Cost</td>
+              <th>Income Desc</th>
+              <th>Amount</th>
             </tr>
-          </table>
+              <tr>
+                <td id=incomeDescID></td>
+                <td id=incomeAmtID></td>
+              </tr>
+            </table>
+
+          <h3>Total:</h3>
+          <h3 id="total"></h3>
         
-          <button onclick="addNewRow()">AddNewRow</button>
+          <button onclick="addNewRowIncome()">AddNewIncome</button>
           <button onclick = "window.location.href='index.html';" >HOME</button> 
 
         </body>
