@@ -39,3 +39,6 @@ h2.pos_left {
 	position: relative;
 	left: -20px;
 }
+h1 {
+	font-size: 40;
+}
