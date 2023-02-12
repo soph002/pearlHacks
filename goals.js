@@ -37,9 +37,9 @@ function addNewRowGoal() {
 
 function infoComeBackGoalPage(){
     let lastGoalDesc = localStorage.getItem("goalDesc");
-    document.getElementById("goalDescID").innerHTML=lastFoodDesc;
+    document.getElementById("goalDescID").innerHTML=lastGoalDesc;
     let lastGoalCost = localStorage.getItem("goalCost");
-    document.getElementById("goalCostID").innerHTML=lastFoodCost;
+    document.getElementById("goalCostID").innerHTML=lastGoalCost;
     let lastTotalAmt = localStorage.getItem("salary");
     document.getElementById("total").innerHTML=lastTotalAmt;
 }
