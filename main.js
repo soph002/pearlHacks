@@ -34,7 +34,7 @@ function clickName() {
         if (nameInput == null || nameInput == "") {
             text = "invalid";
         } else {
-            text = nameInput;
+            text = "Welcome Back "+nameInput+"!";
         }
         document.getElementById("nameOfPerson").innerHTML=text;
 
@@ -57,11 +57,11 @@ function updateAmountLeft() {
 
 //adding subscriptions to table on homepage
 function myCreateFunction() {
-                    var table = document.getElementById("Subscriptions");
-                    var row = table.insertRow(1);
-                    var name = row.insertCell(0);
-                    var cost = row.insertCell(1);
-                    var date = row.insertCell(2);
+    var table = document.getElementById("Subscriptions");
+    var row = table.insertRow(1);
+    var name = row.insertCell(0);
+    var cost = row.insertCell(1);
+    var date = row.insertCell(2);
 
                     // could be cleaner with for loop. 
                     let promptForName = prompt("Please enter the name of subscription:");
@@ -76,6 +76,8 @@ function myCreateFunction() {
                         cost.innerHTML = "invalid";
                     } else {
                         cost.innerHTML = promptForCost;
+                        localStorage.setItem("salary",JSON.stringify(String.valueOf(localStorage.getItem("salary"))-String.valueOf(cost)))
+                        document.getElementById("total").innerHTML=localStorage.getItem("salary");            
                     }
                     
                     let promptForDate = prompt("Please enter the date of subscription:");
@@ -105,7 +107,7 @@ function myCreateFunction() {
             cost.innerHTML = "invalid";
         } else {
             cost.innerHTML = promptForCost;
-
+            var newcost=Number(localStorage.getItem("salary"))-Number(cost);
         }
     
     }
@@ -113,7 +115,7 @@ function myCreateFunction() {
 function inputSalary(){
     let promptForDesc = prompt("Enter average salary for month");
     if (promptForDesc == null || promptForDesc == "") {
-        localStorage.setItem("salary","0");
+        localStorage.setItem("salary",0);
         // in the future would clean this up so it would function with this error
     } else {
         localStorage.setItem("salary",promptForDesc);
