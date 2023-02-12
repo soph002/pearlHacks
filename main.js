@@ -1,13 +1,3 @@
-var frog = document.getElementById("frog")
-var frog_emoji = "🐸"
-
-frog.onclick = function(){
-	if(frog.innerHTML.includes(frog_emoji)){
-		frog.innerHTML = "frog"
-	} else {
-		frog.innerHTML = frog.innerHTML + frog_emoji
-	}
-}
 
 //collecting the user information
 var percentageToSave = document.getElementById("PS").innerHTML
@@ -36,14 +26,17 @@ calculate.onclick = function calculateOriginalSpend() {
 	}
 }
 
+
 //add name method
 function clickName() {
-	let promptForName = prompt("Please enter the name of subscription:");
-                    if (promptForName == null || promptForName == "") {
-                        name.innerHTML = "invalid";
-                    } else {
-                        name.innerHTML = promptForName;
-                    }
+        let text;
+	    let nameInput = prompt("Please enter your name");
+        if (nameInput == null || nameInput == "") {
+            text = "invalid";
+        } else {
+            text = nameInput;
+        }
+        document.getElementById("nameOfPerson").innerHTML=text;
 
 }
 
@@ -62,9 +55,10 @@ function updateAmountLeft() {
 	document.getElementById("answer1").innerHTML=answer1
 }
 
-	function myCreateFunction() {
+//adding subscriptions to table on homepage
+function myCreateFunction() {
                     var table = document.getElementById("Subscriptions");
-                    var row = table.insertRow(0);
+                    var row = table.insertRow(1);
                     var name = row.insertCell(0);
                     var cost = row.insertCell(1);
                     var date = row.insertCell(2);
@@ -77,20 +71,55 @@ function updateAmountLeft() {
                         name.innerHTML = promptForName;
                     }
 
-                    let promptForCost = prompt("Please enter the name of subscription:");
+                    let promptForCost = prompt("Please enter the cost of subscription:");
                     if (promptForCost == null || promptForCost == "") {
                         cost.innerHTML = "invalid";
                     } else {
                         cost.innerHTML = promptForCost;
                     }
                     
-                    let promptForDate = prompt("Please enter the name of subscription:");
+                    let promptForDate = prompt("Please enter the date of subscription:");
                     if (promptForDate == null || promptForDate == "") {
                         date.innerHTML = "invalid";
                     } else {
                         date.innerHTML = promptForDate;
                     }
     }
+// adding rows into internal tables
+    function addNewRow() {
+        var table = document.getElementById("InternalTable");
+        var row = table.insertRow(0);
+        var desc = row.insertCell(0);
+        var cost = row.insertCell(1);
+    
+        // could be cleaner with for loop. 
+        let promptForDesc = prompt("Please enter the name of subscription:");
+        if (promptForDesc == null || promptForDesc == "") {
+            desc.innerHTML = "invalid";
+        } else {
+            desc.innerHTML = promptForDesc;
+        }
+    
+        let promptForCost = prompt("Please enter the name of subscription:");
+        if (promptForCost == null || promptForCost == "") {
+            cost.innerHTML = "invalid";
+        } else {
+            cost.innerHTML = promptForCost;
+
+        }
+    
+    }
+
+function inputSalary(){
+    let promptForDesc = prompt("Enter average salary for month");
+    if (promptForDesc == null || promptForDesc == "") {
+        localStorage.setItem("salary","0");
+        // in the future would clean this up so it would function with this error
+    } else {
+        localStorage.setItem("salary",promptForDesc);
+    }
+    document.getElementById("total").innerHTML=localStorage.getItem("salary");
+}
 
 
 

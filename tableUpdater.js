@@ -1,5 +1,5 @@
 function addNewRow() {
-    var table = document.getElementById("NecessityTable");
+    var table = document.getElementById("InternalTable");
     var row = table.insertRow(0);
     var desc = row.insertCell(0);
     var cost = row.insertCell(1);
