@@ -86,7 +86,8 @@ function myCreateFunction() {
                     }
                     if(localStorage.getItem("salary") !=null)
                     {
-                        document.getElementById("total").innerHTML-=Number(cost);
+                        var temp = parseInt(document.getElementById("total").innerHTML)+parseInt(cost);
+                        document.getElementById("total").innerHTML=temp;
                     }
     }
 // adding rows into internal tables
