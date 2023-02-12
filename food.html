@@ -7,14 +7,19 @@
     </head>
     <h1>FOOD:</h1>
     <body>
-        <table id="InternalTable">
+      <body onload = "infoComeBack()" ></body>
+        <table id="FoodTable">
+          <tr>
+            <th>Desc</th>
+            <th>Cost</th>
+          </tr>
             <tr>
-              <td>Desc</td>
-              <td>Cost</td>
+              <td id=foodDescID></td>
+              <td id=foodCostID></td>
             </tr>
           </table>
         
-          <button onclick="addNewRow()">AddNewRow</button>
+          <button onclick="addNewRowFood()">AddNewRow</button>
           <button onclick = "window.location.href='index.html';" >HOME</button> 
 
         </body>

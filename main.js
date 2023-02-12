@@ -93,9 +93,9 @@ function myCreateFunction() {
                         document.getElementById("total").innerHTML=temp;
                     }
     }
-// adding rows into internal tables
-    function addNewRow() {
-        var table = document.getElementById("InternalTable");
+// adding rows into food tables
+    function addNewRowFood() {
+        var table = document.getElementById("FoodTable");
         var row = table.insertRow(0);
         var desc = row.insertCell(0);
         var cost = row.insertCell(1);
@@ -106,6 +106,7 @@ function myCreateFunction() {
             desc.innerHTML = "invalid";
         } else {
             desc.innerHTML = promptForDesc;
+            localStorage.setItem("foodDesc",promptForDesc);
         }
     
         let promptForCost = prompt("Please enter the name of subscription:");
@@ -113,7 +114,33 @@ function myCreateFunction() {
             cost.innerHTML = "invalid";
         } else {
             cost.innerHTML = promptForCost;
-            
+            localStorage.setItem("foodCost",promptForCost);
+        }
+    
+    }
+
+    // adding rows into food tables
+    function addNewRowNecs() {
+        var table = document.getElementById("NecsTable");
+        var row = table.insertRow(0);
+        var desc = row.insertCell(0);
+        var cost = row.insertCell(1);
+    
+        // could be cleaner with for loop. 
+        let promptForDesc = prompt("Please enter the name of subscription:");
+        if (promptForDesc == null || promptForDesc == "") {
+            desc.innerHTML = "invalid";
+        } else {
+            desc.innerHTML = promptForDesc;
+            localStorage.setItem("necsDesc",promptForDesc);
+        }
+    
+        let promptForCost = prompt("Please enter the name of subscription:");
+        if (promptForCost == null || promptForCost == "") {
+            cost.innerHTML = "invalid";
+        } else {
+            cost.innerHTML = promptForCost;
+            localStorage.setItem("necsCost",promptForCost);
         }
     
     }
@@ -129,7 +156,7 @@ function inputSalary(){
    document.getElementById("total").innerHTML=localStorage.getItem("salary");
 }
 
-function infoComeBack() {
+function infoComeBackHomePage() {
     let lastTotalAmt = localStorage.getItem("salary");
     document.getElementById("total").innerHTML=lastTotalAmt;
     let lastNameSubscription = localStorage.getItem("subscriptionName");
@@ -138,6 +165,14 @@ function infoComeBack() {
     document.getElementById("subCost").innerHTML=lastCostSubscription;
     let lastDateSubscription = localStorage.getItem("subscriptionDate");
     document.getElementById("subDate").innerHTML=lastDateSubscription;
+
+}
+
+function infoComeBackFoodPage(){
+    let lastFoodDesc = localStorage.getItem("foodDesc");
+    document.getElementById("foodDescID").innerHTML=lastFoodDesc;
+    let lastFoodCost = localStorage.getItem("foodCost");
+    document.getElementById("foodCostID").innerHTML=lastFoodCost;
 
 }
 
