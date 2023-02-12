@@ -1,12 +1,37 @@
 body {
-	background-color: #97eaae;
-	color: #c34e4c;
+	background-color: #20aaa0;
+	color: #ffffff;
 	text-align: center;
 	margin-top: 80px;
 }
 button {
-	background-color: #2b5a6d;
-	color: #a6e8e2;
-	font-size: 15px;
-	margin: 15px;
+background-color: #ffffff;
+border: none;
+color: #20aaa0;
+padding: 15px 32px;
+margin-left: auto;
+display: inline-block;
+font-size: 18px;
+text-align: center;
+}
+
+table, th, td {
+  border: 1px solid black;
+  width: 15%;
+  border-collapse: collapse;
+  color: #ffffff;
+  position: sticky;
+  left: -20px;
+  
+  
+  
+
+}
+th {
+	height: 70px;
+	text-align: bottom left;
+}
+th, td {
+	padding: 15px;
+	text-align: bottom left;
 }
