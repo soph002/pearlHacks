@@ -25,8 +25,11 @@ function addNewRowGoal() {
 
     if(localStorage.getItem("salary") !=null)
     {
-        var temp = parseInt(document.getElementById("total").innerHTML)-parseInt(cost.innerHTML);
-        document.getElementById("total").innerHTML=temp;
+        if(localStorage.getItem("goalDesc") <= document.getElementById("total").innerHTML){
+            localStorage.setItem("achievement","goalMet");
+            var temp = parseInt(document.getElementById("total").innerHTML)-parseInt(cost.innerHTML);
+            document.getElementById("total").innerHTML=temp;
+        }
     }
 
 }
@@ -38,5 +41,4 @@ function infoComeBackGoalPage(){
     document.getElementById("goalCostID").innerHTML=lastFoodCost;
     let lastTotalAmt = localStorage.getItem("salary");
     document.getElementById("total").innerHTML=lastTotalAmt;
-
 }
