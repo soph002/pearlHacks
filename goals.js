@@ -27,7 +27,8 @@ function addNewRowGoal() {
     {
         let temp = parseInt(localStorage.getItem("salary"))-parseInt(cost.innerHTML);
         localStorage.setItem("salary",temp);
-        if(temp<=document.getElementById("total".innerHTML))
+        //checks to see if the goal was met. 
+        if(temp<=parseInt(localStorage.getItem("salary")))
         {
             localStorage.setItem("achievement",temp)
         }
