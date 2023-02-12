@@ -50,6 +50,7 @@ var updateAmount = document.getElementById("Update")
 //updateAmount.onclick =
 
 function updateAmountLeft() {
+
 	let currentTotal= document.getElemenetById("amtLeftToSpend").textContent
 	let answer1 = Integer.parseInt(currentTotal)-amount
 	document.getElementById("answer1").innerHTML=answer1
@@ -86,8 +87,9 @@ function myCreateFunction() {
                     }
                     if(localStorage.getItem("salary") !=null)
                     {
-                        var temp = parseInt(document.getElementById("total").innerHTML)+parseInt(cost);
+                        var temp = parseInt(document.getElementById("total").innerHTML)-parseInt(cost.innerHTML);
                         document.getElementById("total").innerHTML=temp;
+                        localStorage.setItem("salary",temp);
                     }
     }
 // adding rows into internal tables
@@ -123,7 +125,12 @@ function inputSalary(){
     } else {
         localStorage.setItem("salary",promptForAvgSal);
     }
-    document.getElementById("total").innerHTML=localStorage.getItem("salary");
+   document.getElementById("total").innerHTML=localStorage.getItem("salary");
+}
+
+function infoComeBack() {
+    let lastTotalAmt = localStorage.getItem("salary");
+    document.getElementById("total").innerHTML=lastTotalAmt;
 }
 
 
