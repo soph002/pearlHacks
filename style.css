@@ -20,7 +20,8 @@ table, th, td {
   width: 15%;
   border-collapse: collapse;
   color: #ffffff;
-  text-align: bottom left;
+  position: sticky;
+  left: -20px;
   
   
   
